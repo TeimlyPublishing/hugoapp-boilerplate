@@ -1,2 +1,5 @@
 languageCode = "en-us"
 title = "My New Netlify Victor Hugo Site"
+nodeVersion: 12
+ssgName: hugo
+cmsName: git
