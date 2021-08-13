@@ -1,9 +1,10 @@
-[build.production]
+[build]
 NODE_VERSION = 14
-YARN_VERSION = "1.12.1"
-NPM_VERSION = "6.4.1" 
+
 
 [build.production]
+YARN_VERSION = "1.12.1"
+NPM_VERSION = "6.4.1" 
 command = "yarn build"
 publish = "dist"
 
