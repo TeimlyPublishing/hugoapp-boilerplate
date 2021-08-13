@@ -6,16 +6,16 @@
   HUGO_VERSION = "0.87.0"
   NODE_VERSION = 14
 
-command = "yarn build"
+command = "hugo build"
 
 
 [build.production]
-command = "yarn build"
+command = "hugo build"
 publish = "public"
 
 
 [deploy-preview]
-command = "yarn build:preview"
+command = "hugo build:preview"
 
 # Hugo Netlify configuration
 [production.environment]
