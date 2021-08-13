@@ -3,10 +3,11 @@ NODE_VERSION = 14
 
 
 [build.production]
-YARN_VERSION = "1.12.1"
-NPM_VERSION = "6.4.1" 
+base = /opt/build/repo/site
 command = "yarn build"
-publish = "dist"
+commandOrigin = ui
+publish = "/opt/build/repo/site/public"
+publishOrigin = ui
 
 [deploy-preview]
 command = "yarn build:preview"
