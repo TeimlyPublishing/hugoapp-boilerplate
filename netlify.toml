@@ -1,5 +1,12 @@
 [build]
-NODE_VERSION = 14
+  command = "hugo"
+  publish = "public"
+
+[build.environment]
+  HUGO_VERSION = "0.87.0"
+  NODE_VERSION = 14
+
+command = "yarn build"
 
 
 [build.production]
