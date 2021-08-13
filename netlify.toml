@@ -3,8 +3,6 @@ noJSConfigInAssets = false
 useResourceCacheWhen = 'fallback'
 writeStats = false
 NODE_VERSION = 14
-
-[build]
   command = "hugo"
   publish = "public"
 
