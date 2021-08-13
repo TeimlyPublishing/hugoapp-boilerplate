@@ -3,7 +3,6 @@ NODE_VERSION = 14
 
 
 [build.production]
-base = /opt/build/repo/site
 command = "yarn build"
 commandOrigin = ui
 publish = "/opt/build/repo/site/public"
