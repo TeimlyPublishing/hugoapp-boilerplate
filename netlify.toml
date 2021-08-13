@@ -1,36 +1,25 @@
-[build.environment]
-  YARN_VERSION = "1.12.1"
-  NPM_VERSION = "6.4.1"
-
 [build]
   command = "yarn build"
   publish = "dist"
 
+
+[build.environment]
+#  Node correction for Stackbit; Expected Version >=12
+  NODE_VERSION = ">=12" 
+# 
+  YARN_VERSION = "1.12.1"
+  NPM_VERSION = "6.4.1"  
+
 [context.deploy-preview]
   command = "yarn build:preview"
 
-# Hugo Version
 
-
+  
 [context.production.environment]
-  HUGO_VERSION = "0.83.1"
+  HUGO_VERSION = "0.87.0"
+  HUGO_ENV = "production"
+  HUGO_ENABLEGITINFO = "true"   
 
-
-[build]
-publish = "public"
-command = "hugo --gc --minify"
-
-[context.production.environment]
-HUGO_VERSION = "0.87.0"
-HUGO_ENV = "production"
-HUGO_ENABLEGITINFO = "true"
-
-[context.split1]
-command = "hugo --gc --minify --enableGitInfo"
-
-[context.split1.environment]
-HUGO_VERSION = "0.87.0"
-HUGO_ENV = "production"
 
 [context.deploy-preview]
 command = "hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL"
