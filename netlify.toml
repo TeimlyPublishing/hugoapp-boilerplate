@@ -3,7 +3,7 @@
   publish = "public"
 
 [build.environment]
-  HUGO_VERSION = "0.87.0"
+
   NODE_VERSION = 14
 
 command = "hugo build"
@@ -19,7 +19,6 @@ command = "hugo build:preview"
 
 # Hugo Netlify configuration
 [production.environment]
-HUGO_VERSION = "0.87.0"
 HUGO_ENV = "production"
 HUGO_ENABLEGITINFO = "true"
 
@@ -27,15 +26,11 @@ HUGO_ENABLEGITINFO = "true"
 command = "hugo --gc --minify --enableGitInfo"
 
 [split1.production]
-HUGO_VERSION = "0.87.0"
-HUGO_ENV = "production"
 
+HUGO_ENV = "production"
 
 [branch-deploy]
 command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
-
-[branch-deploy.production]
-HUGO_VERSION = "0.87.0"
 
 [next.environment]
 HUGO_ENABLEGITINFO = "true"
