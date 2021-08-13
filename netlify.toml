@@ -1,13 +1,12 @@
 [build]
+noJSConfigInAssets = false
+useResourceCacheWhen = 'fallback'
+writeStats = false
+NODE_VERSION = 14
+
+[build]
   command = "hugo"
   publish = "public"
-
-[build.environment]
-
-  NODE_VERSION = 14
-
-command = "hugo build"
-
 
 [build.production]
 command = "hugo build"
