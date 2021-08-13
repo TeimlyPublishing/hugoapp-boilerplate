@@ -4,9 +4,8 @@ NODE_VERSION = 14
 
 [build.production]
 command = "yarn build"
-commandOrigin = ui
-publish = "/opt/build/repo/site/public"
-publishOrigin = ui
+publish = "public"
+
 
 [deploy-preview]
 command = "yarn build:preview"
