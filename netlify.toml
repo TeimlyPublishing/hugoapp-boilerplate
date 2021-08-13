@@ -8,28 +8,28 @@ NPM_VERSION = "6.4.1"
 command = "yarn build"
 publish = "dist"
 
-[context.deploy-preview]
+[deploy-preview]
 command = "yarn build:preview"
 
 # Hugo Netlify configuration
-[context.production.environment]
+[production.environment]
 HUGO_VERSION = "0.87.0"
 HUGO_ENV = "production"
 HUGO_ENABLEGITINFO = "true"
 
-[context.split1]
+[split1]
 command = "hugo --gc --minify --enableGitInfo"
 
-[context.split1.production]
+[split1.production]
 HUGO_VERSION = "0.87.0"
 HUGO_ENV = "production"
 
 
-[context.branch-deploy]
+[branch-deploy]
 command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
 
-[context.branch-deploy.production]
+[branch-deploy.production]
 HUGO_VERSION = "0.87.0"
 
-[context.next.environment]
+[next.environment]
 HUGO_ENABLEGITINFO = "true"
