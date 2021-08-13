@@ -1,10 +1,33 @@
-[build.environment]
-  YARN_VERSION = "1.12.1"
-  NPM_VERSION = "6.4.1"
-
 [build]
-  command = "yarn build"
-  publish = "dist"
+noJSConfigInAssets = false
+useResourceCacheWhen = 'fallback'
+writeStats = false
+NODE_VERSION = 14
+  command = "hugo"
+  publish = "public"
 
-[context.deploy-preview]
-  command = "yarn build:preview"
+[build.production]
+command = "hugo build"
+publish = "public"
+
+
+[deploy-preview]
+command = "hugo build:preview"
+
+# Hugo Netlify configuration
+[production.environment]
+HUGO_ENV = "production"
+HUGO_ENABLEGITINFO = "true"
+
+[split1]
+command = "hugo --gc --minify --enableGitInfo"
+
+[split1.production]
+
+HUGO_ENV = "production"
+
+[branch-deploy]
+command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
+
+[next.environment]
+HUGO_ENABLEGITINFO = "true"
