@@ -1,13 +1,14 @@
 {
     "name": "victor-hugo",
-    "version": "1.0.0",
-    "description": "Victor Hugo is a Hugo boilerplate for creating truly epic websites!",
-    "repository": "netlify/victor-hugo",
-    "main": "index.js",
-
     "engines": {
         "node": "14.x"
     }
+    "version": "1.0.0",
+    "description": "?",
+    "repository": "?",
+    "main": "index.js",
+
+
     "scripts": {
         "lint": "eslint src",
         "start": "run-p start:**",
